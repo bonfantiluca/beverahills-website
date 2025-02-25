@@ -32,7 +32,8 @@ export const revalidate=0;
 const StoriaPage =  () => {
 
     return (
-        <div className="max-w-screen-xl">
+        <div>
+           <h2 className="text-4xl font-extrabold text-gray-800 titolo mb-4 text-center">La nostra storia.</h2>
             {sections.map((section, index) => (
                 <motion.div
                 key={index}
@@ -53,11 +54,11 @@ const StoriaPage =  () => {
                 </div>
                 </motion.div>
             ))}
-            <div className="text-center mt-10 bg-pesca p-6 rounded-2xl mx-8">
-                <h2 className="text-2xl font-semibold text-verde_scuro ">
+            <div className="text-center mt-10 shadow-md shadow-verde_chiaro p-6 rounded-2xl mx-8">
+                <h2 className="text-2xl font-semibold  ">
                 “Il grande vino nasce quando l’uomo è in sintonia con le energie della natura,
                 </h2>
-                <h2 className="text-2xl font-medium text-verde_scuro mt-2 ">
+                <h2 className="text-2xl font-medium  mt-2 ">
                 solo l’uomo sa creare la spinta di amore che determina la fusione completa tra vino e natura.”
                 </h2>
             </div>

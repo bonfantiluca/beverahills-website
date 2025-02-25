@@ -9,3 +9,11 @@ html, body, :root{
   --verde-chiaro: #9cde9f;
   --pesca: rgb(247, 178, 140);
 }
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Per Firefox */
+html {
+  scrollbar-width: none;
+}

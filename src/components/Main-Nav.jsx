@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useLocation  } from "react-router";
 import React from "react";
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'; // Importa le icone hamburger e close
 import { useState } from "react";
@@ -8,6 +8,7 @@ import clsx from "clsx";
 const MainNav = () => {
 
     const [menuOpen, setMenuOpen] = useState(false); // Stato per gestire il menù a tendina
+    const location = useLocation(); // Hook per ottenere il percorso attuale
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen); // Toggle per aprire o chiudere il menù
@@ -42,7 +43,13 @@ const MainNav = () => {
 
             <div className="hidden md:flex mx-8 space-x-4 lg:space-x-6">
                 {routes.map((route) => (
-                    <Link key={route.href} to={route.href} className={clsx("text-lg font-normal text-pesca transition-colors hover:text-rosso")}>
+                    <Link key={route.href} to={route.href} 
+                    className={clsx(
+                        "text-lg font-normal transition-colors",
+                        location.pathname === route.href ? "text-verde_chiaro font-medium" : "text-pesca hover:text-verde_chiaro"
+                    )}
+                    >
+                        
                         {route.label}
                     </Link>
                 ))}
@@ -54,10 +61,10 @@ const MainNav = () => {
                     {routes.map((route) => (
                         <Link key={route.href} to={route.href}
                         onClick={() => setMenuOpen(false)}
-                         className={clsx(
-                            "relative p-1 text-center text-base font-medium text-pesca transition-colors duration-300 ease-in-out after:absolute"
-                            + "after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-logo-color after:content-[''] after:transition-all "
-                            + "after:duration-300 after:ease-in-out hover:after:w-full")}>
+                        className={clsx(
+                            "relative p-1 text-center text-base font-medium transition-colors duration-300 ease-in-out",
+                            location.pathname === route.href ? "text-verde_chiaro font-normal" : "text-pesca hover:text-verde_chiaro"
+                        )}>
                             {route.label}
                         </Link>
                     ))}

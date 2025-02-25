@@ -19,7 +19,7 @@ const vineyardSections = [
       category: "Vitigni a bacca bianca",
       varieties: ["Sauvignon", "Chardonnay", "Solaris (Piwi)"],
       icon:"/icona_uva_bianca.png",
-      shadowColor: "shadow-lime-400"
+      shadowColor: "shadow-lime-800"
     },
     {
       category: "Vitigni a bacca rossa",
@@ -33,10 +33,11 @@ const VignetoPage =  () => {
 
     return (
         <div >
+          <h2 className="text-4xl font-extrabold text-gray-800 titolo mb-4 text-center">Il nostro vigneto.</h2>
             {vineyardSections.map((section, index) => (
         <motion.div
           key={index}
-          className={`flex flex-col md:flex-row items-center my-12 ${
+          className={`flex flex-col md:flex-row items-center py-8 ${
             index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
           }`}
           initial={{ opacity: 0, y: 50 }}
