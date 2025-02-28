@@ -14,7 +14,7 @@ const Footer = () => {
 
                 {/* Contatti */}
                 <div className="flex flex-col">
-                    <p>Email: <a href="mailto:info@beverahills.it" className="underline hover:text-white transition">info@beverahills.com</a></p>
+                    <p>Email: <a href="mailto:info@beverahills.it" className="underline hover:text-white transition">info@beverahills.it</a></p>
                     <p>Cell: <a href="tel:+393358347925" className="underline hover:text-white transition">+39 335 834 7925</a></p>
                 </div>
 

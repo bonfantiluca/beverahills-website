@@ -4,10 +4,7 @@ import { motion } from "framer-motion";
 export const revalidate = 0;
 const HomePage = () => {
     const vineyardDetails = [
-        {
-            image: "beverahills_vigneto_2.jpg",
-            text: "Dalla vigna al calice, celebriamo la passione per il vino."
-        },
+        
         {
             image: "beverahills_vigneto_3.jpg",
             text: "Un viaggio che inizia dalla terra e finisce nel cuore."
@@ -15,6 +12,10 @@ const HomePage = () => {
         {
             image: "beverahills_vigneto_1.jpg",
             text: "Ogni filare racconta una storia, ogni grappolo racchiude un'emozione."
+        },
+        {
+            image: "beverahills_vigneto_2.jpg",
+            text: "Dalla vigna al calice, celebriamo la passione per il vino."
         }
     ];
 

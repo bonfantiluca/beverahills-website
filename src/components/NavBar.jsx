@@ -36,11 +36,14 @@ const NavBar = () => {
               <h1 className="text-4xl sm:text-5xl  text-pesca text-end titolo hover:text-verde_chiaro transition">Beverahills</h1>
             </Link>
 
-            {/* MainNav (menu desktop) */}
+            {/* MainNav (menu mobile) */}
             <MainNav />
-            <Link to="/" className="md:hidden flex items-center justify-center w-full">
-              <h1 className="text-4xl sm:text-5xl text-pesca text-center titolo hover:text-verde_chiaro transition">Beverahills</h1>
-            </Link>
+            <div className="md:hidden flex items-center justify-center w-full">
+              <Link to="/" className="flex items-center ">
+                <h1 className="text-4xl sm:text-5xl text-pesca text-center titolo hover:text-verde_chiaro transition">Beverahills</h1>
+              </Link>
+            </div>
+            
           </div>
         </div>
       </div>
