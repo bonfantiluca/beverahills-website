@@ -29,7 +29,7 @@ const TimelineScrollbar = () => {
       {/* Timeline */}
       <div className="relative w-4 h-full overflow-hidden">
         <motion.div
-          className="absolute top-0 w-4 bg-red-rosso" // Cambiato bg-rosso con bg-red-500 per Tailwind
+          className="absolute top-0 w-4 bg-rosso" // Cambiato bg-rosso con bg-red-500 per Tailwind
           initial={{ height: 0 }}
           animate={{ height: `${scrollProgress}%` }}
           transition={{ ease: "easeOut", duration: 0.3 }}
