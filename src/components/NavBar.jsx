@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import MainNav from "./Main-Nav";
 import React, { useState, useEffect, useCallback } from "react";
 
@@ -32,16 +31,16 @@ const NavBar = () => {
           {/* Logo e link */}
           <div className="relative flex items-center w-full justify-between px-4 sm:px-6 lg:px-8">
             {/* Logo per schermi grandi */}
-            <Link to="/" className="hidden md:flex items-center">
+            <a key="/" href="/" className="hidden md:flex items-center">
               <h1 className="text-4xl sm:text-5xl  text-pesca text-end titolo hover:text-verde_chiaro transition">Beverahills</h1>
-            </Link>
+            </a>
 
             {/* MainNav (menu mobile) */}
             <MainNav />
             <div className="md:hidden flex items-center justify-center w-full">
-              <Link to="/" className="flex items-center ">
+              <a key="/" href="/" className="flex items-center ">
                 <h1 className="text-4xl sm:text-5xl text-pesca text-center titolo hover:text-verde_chiaro transition">Beverahills</h1>
-              </Link>
+              </a>
             </div>
             
           </div>
