@@ -15,7 +15,7 @@ const MainNav = () => {
         { label: "La storia", href: "/storia" },
         { label: "Il vigneto", href: "/vigneto" },
         { label: "I nostri vini", href: "/vini" },
-        { label: "Contatti", href: "/contacts" }
+        { label: "Contatti", href: "/contatti" }
     ];
     
     return (
