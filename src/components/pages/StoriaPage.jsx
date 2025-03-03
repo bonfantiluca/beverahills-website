@@ -8,7 +8,7 @@ const sections = [
       image: "beverahills_vigneto_4.jpg",
     },
     {
-      text: "La storia di Giuseppe è una parabola di produzione locale in cui si conciliano visioni nuove e duro lavoro, fin dall’inizio."
+      text: "La storia di Giuseppe è una parabola di produzione locale in cui si conciliano visioni nuove e duro lavoro, fin dall’inizio. "
             + "Giuseppe, infatti, a poco più di vent’anni, decide di lasciare il posto fisso e lanciarsi nell’esperienza imprenditoriale di"
             + " aprire una sua azienda agricola. A ispirarlo è anche suo padre, a sua volta agricoltore, seppure più tradizionale, dedito a seminativi e concimazioni.",
       image: "beverahills_vigneto_5.jpg",

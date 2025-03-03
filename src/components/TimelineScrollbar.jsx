@@ -25,7 +25,7 @@ const TimelineScrollbar = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 right-0 h-full flex flex-col items-center">
+    <div className="hidden md:fixed md:top-0 md:right-0 md:h-full md:flex md:flex-col md:items-center">
       {/* Timeline */}
       <div className="relative w-4 h-full overflow-hidden">
         <motion.div
