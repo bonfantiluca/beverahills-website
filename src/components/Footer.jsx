@@ -33,7 +33,7 @@ const Footer = () => {
             </div>
 
             {/* Copyright */}
-            <p className="text-sm text-center mt-4">&copy; {new Date().getFullYear()} BeveraHill. Tutti i diritti sono riservati.</p>
+            <p className="text-sm text-center mt-4">&copy; {new Date().getFullYear()} Beverahills. Tutti i diritti sono riservati.</p>
         </footer>
     );
 };

@@ -19,11 +19,11 @@ const sections = [
       image: "beverahills_vigneto_6.jpg",
     },
     {
-        text: "Finalmente, arrivato a un’età in cui azzardare non fa più paura, il sogno si realizza, e da questo sogno nascono i primi vini di BeveraHills",
+        text: "Finalmente, arrivato a un’età in cui azzardare non fa più paura, il sogno si realizza, e da questo sogno nascono i primi vini di Beverahills.",
         image: "beverahills_vini_1.jpg",
       },
     {
-      text: "BeveraHills. Ogni dettaglio conta, ogni sorso racconta.",
+      text: "Beverahills.\nOgni dettaglio conta, ogni sorso racconta.",
       image: "beverahills_vigneto_7.jpg",
     },
   ];
