@@ -22,7 +22,7 @@ function App() {
           <Route path="/storia" element={<StoriaPage />} />
           <Route path="/vigneto" element={<VignetoPage />} />
           <Route path="/vini" element={<ViniPage />} />
-          <Route path="/contacts" element={<ContactsPage />} />
+          <Route path="/contatti" element={<ContactsPage />} />
         </Routes>
       </main>
       <Footer />
