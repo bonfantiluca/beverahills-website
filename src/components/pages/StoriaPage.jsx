@@ -54,11 +54,11 @@ const StoriaPage =  () => {
                 </div>
                 </motion.div>
             ))}
-            <div className="text-center mt-10 shadow-md shadow-verde_chiaro p-6 rounded-2xl mx-8">
-                <h2 className="text-2xl font-semibold  ">
+            <div className="text-center mt-10 shadow-md shadow-verde_chiaro p-6 rounded-2xl md:mx-8">
+                <h2 className="text-xl md:text-2xl font-semibold  ">
                 “Il grande vino nasce quando l’uomo è in sintonia con le energie della natura,
                 </h2>
-                <h2 className="text-2xl font-medium  mt-2 ">
+                <h2 className="text-xl md:text-2xl font-medium  mt-2 ">
                 solo l’uomo sa creare la spinta di amore che determina la fusione completa tra vino e natura.”
                 </h2>
             </div>
