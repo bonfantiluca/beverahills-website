@@ -5,12 +5,12 @@ const vineyardSections = [
       title: "La Scelta del Nostro Vigneto",
       text: "Fin dall’inizio, il nostro obiettivo è stato chiaro: creare un vigneto che potesse esprimere al meglio il territorio di Beverahills. \n\n"
       +" Per questo, non ci siamo affidati al caso, ma abbiamo intrapreso un percorso di studio e ricerca approfondita. Con il supporto di enologi e agronomi, abbiamo analizzato nel dettaglio il suolo della nostra tenuta, valutandone la composizione, la struttura e la capacità di nutrire le viti. Ma non ci siamo fermati qui. Abbiamo considerato ogni elemento fondamentale per garantire il massimo benessere delle piante: l’esposizione alla luce solare, l’orientamento dei filari e le caratteristiche microclimatiche della zona.",
-      image: "beverahills_vigneto_9.jpg",
+      image: "beverahills_vigneto_9.webp",
     },
     {
       title: "Le Nostre Varietà",
       text: "Abbiamo scelto con cura le varietà da coltivare, puntando su vitigni che potessero esprimere al meglio il potenziale del nostro terroir.",
-      image: "beverahills_uva_1.jpg",
+      image: "beverahills_uva_1.webp",
     },
   ];
   
