@@ -6,6 +6,7 @@ import VignetoPage from './components/pages/VignetoPage';
 import ViniPage from './components/pages/ViniPage';
 import ContactsPage from './components/pages/ContattiPage';
 import TimelineScrollbar from "./components/TimelineScrollbar";
+import { Helmet } from "react-helmet";
 
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
@@ -13,6 +14,12 @@ import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
+    <>
+     <Helmet>
+        <title>Beverahills - Vini e Vigneto della Brianza</title>
+        <meta name="description" content="Scopri Beverahills, il vigneto della Brianza che produce vini unici. Ogni dettaglio conta, ogni sorso racconta." />
+        <meta name="keywords" content="vino, Brianza, vigneto, degustazione, enologia, terre lariane" />
+      </Helmet>
     <div className="min-h-screen flex flex-col">
       <TimelineScrollbar />
       <NavBar />
@@ -27,6 +34,7 @@ function App() {
       </main>
       <Footer />
     </div>
+    </>
   );
 }
 
