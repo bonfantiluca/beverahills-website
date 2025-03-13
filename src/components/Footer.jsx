@@ -21,7 +21,7 @@ const Footer = () => {
                 {/* Instagram */}
                 <div className="flex flex-col items-center justify-center whitespace-nowrap">
                     <p>Seguici su</p>
-                    <a href="https://www.instagram.com/bonfantilucaa/" className="text-2xl hover:text-white transition">
+                    <a href="https://www.instagram.com/beverahills/" className="text-2xl hover:text-white transition">
                         <FaInstagram />
                     </a>
                 </div>
