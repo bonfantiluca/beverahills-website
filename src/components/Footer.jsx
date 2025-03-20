@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram,FaStar  } from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -18,6 +18,18 @@ const Footer = () => {
                     <p>Cell: <a href="tel:+393358347925" className="underline hover:text-white transition">+39 335 834 7925</a></p>
                 </div>
 
+                <div className="flex flex-col items-center justify-center whitespace-nowrap">
+                    <p>Lascia una recensione positiva!</p>
+                    <a href="https://g.page/r/Cak1xLvqlBXSEBM/review" className="text-2xl hover:text-white transition flex">
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+
+
+                    </a>
+                </div>
                 {/* Instagram */}
                 <div className="flex flex-col items-center justify-center whitespace-nowrap">
                     <p>Seguici su</p>

@@ -6,11 +6,11 @@ const HomePage = () => {
     const vineyardDetails = [
         
         {
-            image: "beverahills_vigneto_3.webp",
+            image: "beverahills_vigneto_1.jpg",
             text: "Un viaggio che inizia dalla terra e finisce nel cuore."
         },
         {
-            image: "beverahills_vigneto_1.webp",
+            image: "beverahills_vigneto_3.jpg",
             text: "Ogni filare racconta una storia, ogni grappolo racchiude un'emozione."
         },
         {

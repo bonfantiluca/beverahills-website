@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 
 const sections = [
     {
-      text: "Sulle colline di Bevera, tra la Brianza e il lago di Como, si trova la tenuta Beverahills. "
-            + "È proprio a Bevera che Giuseppe Bonfanti, imprenditore agricolo, nasce, cresce e invecchia.",
+      text: "Sulle colline di Bevera, tra la Brianza e il lago di Como, si trova la tenuta Beverahills.\n"
+            + "È proprio sulle colline di Bevera che Giuseppe Bonfanti trascorre l’infanzia, cresce e sviluppa la passione per l’agricoltura.",
       image: "beverahills_vigneto_4.webp",
     },
     {
       text: "La storia di Giuseppe è una parabola di produzione locale in cui si conciliano visioni nuove e duro lavoro, fin dall’inizio. "
-            + "Giuseppe, infatti, a poco più di vent’anni, decide di lasciare il posto fisso e lanciarsi nell’esperienza imprenditoriale di"
-            + " aprire una sua azienda agricola. A ispirarlo è anche suo padre, a sua volta agricoltore, seppure più tradizionale, dedito a seminativi e concimazioni.",
+            + "\nGiuseppe, infatti, a poco più di vent’anni, decide di lasciare il posto fisso e lanciarsi nell’esperienza imprenditoriale di"
+            + " aprire una sua azienda agricola. A ispirarlo è anche suo padre, a sua volta agricoltore, seppure più tradizionale.",
       image: "beverahills_vigneto_5.webp",
     },
     {
@@ -50,7 +50,7 @@ const StoriaPage =  () => {
                     className="w-full md:w-1/2 rounded-2xl shadow-lg "
                 />
                 <div className="w-full md:w-1/2 p-6 md:ml-6 md:mr-6 shadow-md shadow-verde_scuro rounded-xl">
-                    <p className="text-lg text-gray-700 font-medium">{section.text}</p>
+                    <p className="text-lg text-gray-700 font-medium whitespace-pre-line">{section.text}</p>
                 </div>
                 </motion.div>
             ))}
