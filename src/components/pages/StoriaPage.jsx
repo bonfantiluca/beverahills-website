@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const sections = [
     {
       text: "Sulle colline di Bevera, tra la Brianza e il lago di Como, si trova la tenuta Beverahills.\n"
-            + "È proprio sulle colline di Bevera che Giuseppe Bonfanti trascorre l’infanzia, cresce e sviluppa la passione per l’agricoltura.",
+            + "È proprio in questa terra che Giuseppe Bonfanti trascorre l’infanzia, cresce e sviluppa la passione per l’agricoltura.",
       image: "beverahills_vigneto_4.webp",
     },
     {
