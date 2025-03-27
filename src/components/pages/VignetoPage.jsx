@@ -38,9 +38,9 @@ const vineyardSections = [
       title: "La Scelta del Nostro Vigneto",
       text: "Fin dall’inizio, il nostro obiettivo è stato chiaro: creare un vigneto che potesse esprimere al meglio il territorio di Beverahills.",
       image: "beverahills_vigneto_9.webp",
-      counter : <div className=" mt-8 p-6 bg-gray-100 rounded-xl shadow-md flex flex-col items-center">
+      counter : <div className=" mt-8 p-6 bg-gray-100 rounded-xl shadow-md  flex flex-col items-center">
       <h3 className="text-xl font-medium text-gray-700 flex items-center"><IoLocationOutline /> Coordinate: </h3>
-      <span className="text-2xl font-light text-verde_scuro">
+      <span className="text-lg md:text-xl font-light text-verde_scuro">
       <Counter  from={0} to={45}/>.
       <Counter  from={0} to={75391}/>, &nbsp;
       <Counter  from={0} to={9}/>.
@@ -56,7 +56,7 @@ const vineyardSections = [
       text: " Per questo, non ci siamo affidati al caso, ma abbiamo intrapreso un percorso di studio e ricerca approfondita. Con il supporto di enologi e agronomi, abbiamo analizzato nel dettaglio il suolo della nostra tenuta, valutandone la composizione, la struttura e la capacità di nutrire le viti. Ma non ci siamo fermati qui. Abbiamo considerato ogni elemento fondamentale per garantire il massimo benessere delle piante: l’esposizione alla luce solare, l’orientamento dei filari e le caratteristiche microclimatiche della zona.",
       image: "beverahills_vigneto_10.jpg",
       counter:<div className=" mt-8 p-6 bg-gray-100 rounded-xl shadow-md flex flex-col items-center">
-      <h3 className="text-xl font-medium text-gray-700 flex items-center"><PiMapPinArea /> Superficie coltivata</h3>
+      <h3 className="text-lg md:text-xl font-medium text-gray-700 flex items-center"><PiMapPinArea /> Superficie coltivata</h3>
       <Counter  from={0} to={4000} suffix=" m²" />
     </div>
     
@@ -66,7 +66,7 @@ const vineyardSections = [
       text: "Abbiamo scelto con cura le varietà da coltivare, puntando su vitigni che potessero esprimere al meglio il potenziale del nostro terroir.",
       image: "beverahills_uva_1.webp",
       counter:<div className="mt-8 p-6 bg-gray-100 rounded-xl shadow-md flex flex-col items-center">
-      <h3 className="text-xl font-medium text-gray-700 flex items-center"><MdOutlineKeyboardDoubleArrowUp />
+      <h3 className="text-lg md:text-xl font-medium text-gray-700 flex items-center"><MdOutlineKeyboardDoubleArrowUp />
       Altitudine</h3>
       <Counter from={0} to={320} className="font-light" suffix=" m s.l.m." />
     </div>
