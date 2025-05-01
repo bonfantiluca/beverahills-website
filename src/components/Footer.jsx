@@ -40,7 +40,7 @@ const Footer = () => {
 
                 {/* Logo */}
                 <div className="flex justify-center md:justify-end">
-                    <img src="/vettoriale-beverahills-pesca.svg" alt="logo" className="w-24" />
+                    <img src="/vettoriale-beverahills-beige.svg" alt="logo" className="w-24" />
                 </div>
             </div>
 

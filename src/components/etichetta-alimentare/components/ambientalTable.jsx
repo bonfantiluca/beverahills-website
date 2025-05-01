@@ -9,13 +9,27 @@ const translations = {
         waste: "Destinazione Rifiuto"
     },
     en: {
+        environment: "Environmental Label",
         category: "Category",
         material: "Material",
         code: "Code",
         waste: "Waste Destination"
+    },
+    de: {
+        environment: "Umweltkennzeichnung",
+        category: "Kategorie",
+        material: "Material",
+        code: "Code",
+        waste: "Abfallentsorgung"
+    },
+    es: {
+        environment: "Etiqueta ambiental",
+        category: "Categoría",
+        material: "Material",
+        code: "Código",
+        waste: "Destino de residuos"
     }
 };
-
 
 const AmbientalTable = ({ product, lang }) => {
 
@@ -30,7 +44,7 @@ const AmbientalTable = ({ product, lang }) => {
                                 <th className="px-1 py-2 border-b">{translations[lang].waste}</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className="text-xs">
                             {product.map((item, index) => (
                                 <tr key={index}>
                                     <td className="px-1 py-2 border-b">{item.category}</td>

@@ -24,7 +24,7 @@ const Counter = ({ from, to, suffix = "" }) => {
 
   return (
     <motion.span 
-      className="text-3xl font-light text-verde_scuro"
+      className="text-2xl md:text-3xl font-light text-verde_scuro"
       whileInView={() => setStart(true)} // Attiva il conteggio quando è visibile
     >
       {count}{suffix}
@@ -40,7 +40,7 @@ const vineyardSections = [
       image: "beverahills_vigneto_9.webp",
       counter : <div className=" mt-8 p-6 bg-gray-100 rounded-xl shadow-md  flex flex-col items-center">
       <h3 className="text-xl font-medium text-gray-700 flex items-center"><IoLocationOutline /> Coordinate: </h3>
-      <span className="text-lg md:text-xl font-light text-verde_scuro">
+      <span className="text-sm md:text-xl font-light text-verde_scuro">
       <Counter  from={0} to={45}/>.
       <Counter  from={0} to={75391}/>, &nbsp;
       <Counter  from={0} to={9}/>.

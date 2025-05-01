@@ -12,6 +12,7 @@ const MainNav = () => {
     };
 
     const routes = [
+        { label: "Home", href: "/" },
         { label: "La storia", href: "/storia" },
         { label: "Il vigneto", href: "/vigneto" },
         { label: "I nostri vini", href: "/vini" },
@@ -42,7 +43,7 @@ const MainNav = () => {
 
             {/* Menu a tendina mobile */}
             {menuOpen && (
-                <div className="md:hidden absolute top-10 left-0 w-full bg-verde_scuro shadow-lg z-50 flex flex-col space-y-4 mt-4 px-4 py-6">
+                <div className="md:hidden absolute top-10 left-0 w-full bg-verde_scuro shadow-lg z-50 flex flex-col space-y-4 mt-4 py-6">
                     {routes.map((route) => (
                         <a key={route.href} href={route.href}
                         onClick={() => setMenuOpen(false)}

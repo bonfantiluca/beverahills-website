@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import Info from "../components/info";
 import NutritionalTable from "../components/nutritionalTable";
 import AmbientalTable from "../components/ambientalTable";
-
+const europeanLanguages = {
+    it: "Italiano", en: "English", de: "Deutsch", es: "Español"
+};
 const translations = {
     it: {
         title: "Etichetta Alimentare",
@@ -25,12 +27,34 @@ const translations = {
         material: "Material",
         code: "Environmental Code",
         waste: "Waste Destination"
+    },
+    de: {
+        title: "Lebensmittelkennzeichnung",
+        not_found: "Produkt nicht gefunden",
+        ingredients: "Zutaten",
+        nutrition: "Nährwertdeklaration",
+        environment: "Umweltkennzeichnung",
+        category: "Kategorie",
+        material: "Material",
+        code: "Umweltcode",
+        waste: "Abfallentsorgung"
+    },
+    es: {
+        title: "Etiqueta Alimentaria",
+        not_found: "Producto no encontrado",
+        ingredients: "Ingredientes",
+        nutrition: "Declaración nutricional",
+        environment: "Etiqueta medioambiental",
+        category: "Categoría",
+        material: "Material",
+        code: "Código Medioambiental",
+        waste: "Destino del residuo"
     }
 };
 
 const productData = {
     name: "Il Biunt",
-    image: "https://picsum.photos/500",
+    image: "../../biunt.png",
     price: 12.99,
     denominazione: "Terre Lariane IGT Sauvignon",
     vitigno: "100% Sauvignon blanc",
@@ -51,34 +75,68 @@ const productData = {
         protein: "0 g",
         sale: "0 g"
     },
-    environmentalInfo: [
-        { category: "Bottiglia", material: "Vetro", code: "GL70", waste: "Raccolta vetro" },
-        { category: "Tappo", material: "Sughero", code: "FOR51", waste: "Organico" },
-        { category: "Capsula", material: "Alluminio", code: "ALU41", waste: "Raccolta metalli" },
-        { category: "Gabbietta", material: "Ferro", code: "FE40", waste: "Raccolta metalli" }
-    ]
+    environmentalInfo: {
+        it: [
+            { category: "Bottiglia", material: "Vetro", code: "GL70", waste: "Raccolta vetro" },
+            { category: "Tappo", material: "Sughero", code: "FOR51", waste: "Organico" },
+            { category: "Capsula", material: "Alluminio", code: "ALU41", waste: "Raccolta metalli" },
+            { category: "Gabbietta", material: "Ferro", code: "FE40", waste: "Raccolta metalli" }
+        ],
+        en: [
+            { category: "Bottle", material: "Glass", code: "GL70", waste: "Glass collection" },
+            { category: "Cork", material: "Cork", code: "FOR51", waste: "Organic" },
+            { category: "Cap", material: "Aluminum", code: "ALU41", waste: "Metal collection" },
+            { category: "Wire cage", material: "Iron", code: "FE40", waste: "Metal collection" }
+        ],
+        de: [
+            { category: "Flasche", material: "Glas", code: "GL70", waste: "Glasentsorgung" },
+            { category: "Korken", material: "Kork", code: "FOR51", waste: "Organisch" },
+            { category: "Kapsel", material: "Aluminium", code: "ALU41", waste: "Metallentsorgung" },
+            { category: "Drahtkorb", material: "Eisen", code: "FE40", waste: "Metallentsorgung" }
+        ],
+        es: [
+            { category: "Botella", material: "Vidrio", code: "GL70", waste: "Recogida de vidrio" },
+            { category: "Tapón", material: "Corcho", code: "FOR51", waste: "Orgánico" },
+            { category: "Cápsula", material: "Aluminio", code: "ALU41", waste: "Recogida de metales" },
+            { category: "Alambre", material: "Hierro", code: "FE40", waste: "Recogida de metales" }
+        ]
+    }
 };
 
 
-const EtichettaAlimentareBiunt = ({ lang = "it" }) => {
+
+const EtichettaAlimentareBiunt = () => {
+    const [lang, setLang] = useState("it");
     const [product] = useState(productData);
 
     return (
-        <div className="bg-white flex">
-                <div className="flex flex-col items-center justify-center text-center ">
-                    <img src={product.image} alt={product.name} className="h-full max-h-[500px]" />
-                    <div className="mt-10 lg:mt-5 w-full">
-                        <Info data={product}/>
-                    </div>
-                    <h1 className="text-2xl font-bold my-4 w-full">{translations[lang].ingredients}</h1>
-                    <p>{product.ingredients}</p>
-                    <h1 className="text-2xl font-bold my-4 w-full">{translations[lang].nutrition}</h1>
-                    <NutritionalTable product={product.nutritionalValues} />
-                    <h1 className="text-2xl font-bold my-4 w-full">{translations[lang].environment}</h1>
-                    <AmbientalTable product={product.environmentalInfo} lang={lang} />
+        <div className="bg-white flex flex-col items-center">
+            <div className="w-full max-w-md px-4">
+                <select
+                    className="w-full border border-gray-300 rounded-md p-2 mb-4"
+                    value={lang}
+                    onChange={(e) => setLang(e.target.value)}
+                >
+                    {Object.entries(europeanLanguages).map(([code, label]) => (
+                        <option key={code} value={code}>{label}</option>
+                    ))}
+                </select>
+            </div>
+            <div className="flex flex-col items-center justify-center text-center">
+                <img src={product.image} alt={product.name} className="h-full max-h-[500px]" />
+                <div className="mt-2 lg:mt-2 w-full">
+                    <Info data={product} lang={lang} />
                 </div>
+                <h1 className="text-2xl font-bold my-4 w-full">{translations[lang].ingredients}</h1>
+                <p>{product.ingredients}</p>
+                <h1 className="text-2xl font-bold my-4 w-full">{translations[lang].nutrition}</h1>
+                <NutritionalTable product={product.nutritionalValues} lang={lang} />
+                <h1 className="text-2xl font-bold my-4 w-full">{translations[lang].environment}</h1>
+                <AmbientalTable product={product.environmentalInfo[lang]} lang={lang} />
+            </div>
         </div>
     );
 };
+
 
 export default EtichettaAlimentareBiunt;

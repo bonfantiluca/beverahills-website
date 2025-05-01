@@ -4,10 +4,10 @@
 
 html, body, :root{
   height: 100%;
-  --rosso: #7a1f1c;
-  --verde-scuro: #3D402F;
+  --rosso: #6E2215;
+  --verde-scuro: #3B442F;
   --verde-chiaro: #9cde9f;
-  --pesca: rgb(247, 178, 140);
+  --pesca: #FEEBCA;
 }
 ::-webkit-scrollbar {
   display: none;
