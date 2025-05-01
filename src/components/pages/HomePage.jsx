@@ -32,7 +32,26 @@ const HomePage = () => {
                 </h2>
             </motion.div>
 
-            <div className="grid pt-8 grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
+
+            <motion.div
+                className="flex flex-col justify-center items-center py-8"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+            >
+                {/* <img src="germoglio-tramonto.jpg" alt="Vigneto Beverahills" className="rounded-2xl shadow-lg" /> */}
+                <div className="text-lg md:text-2xl text-center leading-relaxed text-gray-800">
+                    <p>
+                        <span className="font-semibold">Beverahills</span> è una giovane azienda vinicola con radici profonde nell’agricoltura.
+                        Sebbene sia una realtà emergente nella produzione di vino, porta con sé <span className="font-semibold">un’esperienza trentennale nella lavorazione della terra</span>  e nella cura del verde,
+                        conoscenze maturate in anni di impegno e dedizione.
+                    </p>
+                </div>
+            </motion.div>
+
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 ">
                 {vineyardDetails.map((item, index) => (
                     <motion.div 
                         key={index} 
@@ -43,7 +62,7 @@ const HomePage = () => {
                         viewport={{ once: true }}
                     >
                         <img src={item.image} alt="Vigneto" className="rounded-2xl w-full" />
-                        <h2 className="text-left font-medium text-2xl sm:text-3xl pt-4 md:text-2xl text-verde_scuro">
+                        <h2 className="text-center font-medium text-xl sm:text-2xl pt-4 md:text-2xl text-verde_scuro">
                             {item.text}
                         </h2>
                     </motion.div>
@@ -59,7 +78,7 @@ const HomePage = () => {
                     viewport={{ once: true }}
                 >
                     <h2 className="text-2xl text-center border-2 border-verde_scuro bg-verde_scuro text-verde_chiaro font-medium p-4 rounded-2xl">
-                        <span className="relative z-20">Cinque ettari di vigneto </span> <br /><br /><span className="text-pesca">abbracciati</span><br /> <br /> dai rami del lago di Como.
+                        <span className="relative z-20">Quattro ettari di vigneto </span> <br /><br /><span className="text-pesca">abbracciati</span><br /> <br /> dai rami del lago di Como.
                     </h2>
                     <img src="/lago.svg" alt="Lago" className="absolute -mt-72 md:-mt-60 lg:-mt-72 opacity-50" />
                 </motion.div>
@@ -77,56 +96,7 @@ const HomePage = () => {
                 </motion.video>   
                          </div>
 
-<motion.div
-    className="w-full border-t-4 border-verde_scuro my-16"
-    initial={{ width: 0 }}
-    whileInView={{ width: "100%" }}
-    transition={{ duration: 1 }}
-/>
 
-{/* Prima sezione testo + immagine */}
-    <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-6 md:px-20 py-12"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-    >
-        <img src="germoglio-tramonto.jpg" alt="Vigneto Beverahills" className="rounded-2xl shadow-lg" />
-        <div className="text-lg leading-relaxed text-gray-800">
-            <h2 className="text-3xl font-semibold text-verde_scuro mb-4">
-                Le nostre origini
-            </h2>
-            <p>
-                Beverahills è una giovane azienda vinicola con radici profonde nell’agricoltura.
-                Sebbene sia una realtà emergente nella produzione di vino, porta con sé <span className="font-semibold">un’esperienza trentennale nella lavorazione della terra</span>  e nella cura del verde,
-                conoscenze maturate in anni di impegno e dedizione.
-            </p>
-        </div>
-    </motion.div>
-
-    <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-6 md:px-20 py-12 "
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-    >
-        <div className="text-lg leading-relaxed text-gray-800 order-2 md:order-1">
-            <h2 className="text-3xl font-semibold text-verde_scuro mb-4">
-                Un lavoro di passione
-            </h2>
-            <p>
-                <span className="font-semibold">Situata tra le colline di Bevera di Barzago,</span> Beverahills si estende su 4 ettari di vigneto, coltivati con attenzione, devozione e rispetto per la natura.
-                Ogni fase della produzione è seguita con la massima cura, dalla coltivazione alla potatura, dalla vendemmia alla vinificazione.
-            </p>
-            <p className="mt-4">
-                <span className="font-semibold">Nulla è lasciato al caso,</span> perché ogni passaggio è fondamentale per permettere al vino di esprimere al meglio tutti gli aromi e i profumi che il terreno ha da offrire,
-                trasformando ogni calice in un’autentica espressione del territorio.
-            </p>
-        </div>
-        <img src="grappolo-bianco.jpg" alt="Lavorazione in vigna" className="rounded-2xl shadow-lg order-1 md:order-2" />
-    </motion.div>
 
         </div>
     );
